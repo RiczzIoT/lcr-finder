@@ -1,0 +1,23 @@
+CREATE INDEX IF NOT EXISTS idx_tracks_name_lower ON tracks (name_lower);
+CREATE INDEX IF NOT EXISTS idx_tracks_artist_name_lower ON tracks (artist_name_lower);
+
+
+run terminal
+cargo run --release -- serve --database db.sqlite3
+
+rename song
+python file_renamer.py
+
+
+security https://www.base64decode.org/
+document.addEventListener('keydown', function(e){ if(e.key==='F12'||e.keyCode===123){ e.preventDefault();} if(e.ctrlKey&&e.shiftKey&&(e.key==='I'||e.key==='i')){ e.preventDefault();} if(e.ctrlKey&&e.shiftKey&&(e.key==='J'||e.key==='j')) { e.preventDefault();} if(e.ctrlKey&&e.shiftKey&&(e.key==='C'||e.key==='c')) { e.preventDefault();} if(e.ctrlKey&&(e.key==='U'||e.key==='u')) { e.preventDefault();} });
+
+
+https://github.com/yt-dlp/yt-dlp - downloader music
+yt-dlp -x --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata -o "%(artist)s - %(title)s.%(ext)s" "YOUTUBE_LINK_DITO"
+
+# Idagdag ang lahat ng binago mong files
+git add .
+
+# I-commit ang mga pagbabago na may mensahe
+git commit -m "Nagdagdag ng bagong feature or nag-fix ng bug"
